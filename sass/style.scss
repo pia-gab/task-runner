@@ -1,1 +1,37 @@
-$decorated-text: font-family: 'Parisienne', cursive;
+$first-font: 'Parisienne', cursive;
+$p-font: 'Questrial', sans-serif;
+$headline-font: 'Josefin Sans', sans-serif;
+$main-color: black;
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+#welcome-section {
+    width: 100%;
+    position: relative;
+        img {
+            width: 25px;
+        }
+        #navbar {
+            position: absolute;
+            top: 0;
+            background-color: transparent;
+            display: flex;
+            align-content: space-between;
+                #logo h1 {
+                    font-family: $first-font;
+                    color: gold;
+                    font-size: 21px;
+                }
+                #menu-list ul{
+                    display: flex;
+                    align-content: space-between;
+                    li a {
+                        text-decoration: none;
+                        font-family: $headline-font;
+                    }
+                }
+        }
+}
