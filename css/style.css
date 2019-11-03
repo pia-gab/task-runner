@@ -1,42 +1,139 @@
-.body {
+body {
   margin: 0;
   padding: 0;
 }
 
-#welcome-section {
+.welcome-section {
   width: 100%;
   position: relative;
 }
 
-#welcome-section img {
-  width: 25px;
+.welcome-section .img {
+  width: 100%;
+  height: 500px;
 }
 
-#welcome-section #navbar {
+.welcome-section .img img {
+  width: 100%;
+  height: 500px;
+}
+
+.welcome-section .img::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.welcome-section #navbar {
+  width: 100%;
   position: absolute;
   top: 0;
   background-color: transparent;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-#welcome-section #navbar #logo h1 {
+.welcome-section #navbar #logo h1 {
   font-family: "Parisienne", cursive;
   color: gold;
   font-size: 21px;
 }
 
-#welcome-section #navbar #menu-list ul {
+.welcome-section #navbar #menu-list {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-#welcome-section #navbar #menu-list ul li a {
+.welcome-section #navbar #menu-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.welcome-section #navbar #menu-list ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.welcome-section #navbar #menu-list ul li a {
+  color: white;
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 17px;
+}
+
+.welcome-section .inner-section {
+  position: absolute;
+  top: 180px;
+}
+
+.welcome-section .inner-section h2 {
+  margin: 0 150px;
+  font-size: 25px;
+  line-height: 0.8;
+  font-family: "Parisienne", cursive;
+  color: white;
+}
+
+.welcome-section .inner-section h1 {
+  margin: 24px 0;
+  font-size: 72px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.welcome-section .inner-section .btn {
+  display: inline-block;
+  background: gold;
+  min-width: 160px;
+  margin: 0 120px;
+  padding: 16px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.services-section .section-title {
+  margin: 150px auto;
+  line-height: 0.2;
+}
+
+.services-section .section-title h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 35px;
+}
+
+.services-section .section-title h2 {
+  font-family: "Questrial", sans-serif;
+  color: grey;
+  font-style: italic;
+  font-size: 19px;
+}
+
+.services-section .box .circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 7px solid gold;
+  position: relative;
+}
+
+.services-section .box .circle i {
+  font-size: 35px;
+  color: gold;
+  position: absolute;
+  top: 9px;
+  left: 9px;
 }
 /*# sourceMappingURL=style.css.map */

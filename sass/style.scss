@@ -3,35 +3,118 @@ $p-font: 'Questrial', sans-serif;
 $headline-font: 'Josefin Sans', sans-serif;
 $main-color: black;
 
-.body {
+body {
     margin: 0;
     padding: 0;
 }
 
-#welcome-section {
+.welcome-section {
     width: 100%;
     position: relative;
-        img {
-            width: 25px;
+        .img {
+            width: 100%;
+            height: 500px;
+                img {
+                    width: 100%;
+                    height: 500px;
+                }
+            &::after {
+                content: "";
+                background-color: rgba(0,0,0,.4);
+                width: 100%;
+                height: 500px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
         #navbar {
+            width:  100%;
             position: absolute;
             top: 0;
             background-color: transparent;
             display: flex;
-            align-content: space-between;
-                #logo h1 {
-                    font-family: $first-font;
-                    color: gold;
-                    font-size: 21px;
-                }
-                #menu-list ul{
-                    display: flex;
-                    align-content: space-between;
-                    li a {
-                        text-decoration: none;
-                        font-family: $headline-font;
+            justify-content: space-around;
+            #logo h1 {
+                font-family: $first-font;
+                color: gold;
+                font-size: 21px;
+            }
+            #menu-list {
+                display: flex;
+                justify-content: space-between;
+                width: fit-content;
+                ul{
+                    list-style-type: none;
+                    padding: 0;
+                    li {
+                        display: inline-block;
+                        margin: 0 15px;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-family: $headline-font;
+                            font-size: 17px;
+                        }
                     }
                 }
+            }
+        }
+        .inner-section {
+            position: absolute;
+            top: 180px;
+                h2 {
+                    margin: 0 150px;
+                    font-size: 25px;
+                    line-height: 0.8;
+                    font-family: $first-font;
+                    color: white;
+                }
+                h1 {
+                    margin: 24px 0;
+                    font-size: 72px;
+                    font-family: $headline-font;
+                }
+                .btn {
+                display: inline-block;
+                background: gold;
+                min-width: 160px;
+                margin: 0 120px;
+                padding: 16px;
+                font-size: 20px;
+                text-align: center;
+                text-decoration: none;
+                color: white;
+                font-family: $headline-font;
+
+                }
+        }
+}
+.services-section .section-title {
+    margin: 150px auto;
+    line-height: 0.2;
+    h1 {
+        font-family: $headline-font;
+        font-size: 35px;
+    }
+    h2{
+        font-family: $p-font;
+        color: grey;
+        font-style: italic;
+        font-size: 19px;
+    }
+}
+.services-section .box .circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 7px solid gold;
+        position: relative;
+        i {
+            font-size: 35px;
+            color: gold;
+            position: absolute;
+            top: 9px;
+            left: 9px;
         }
 }
