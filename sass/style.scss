@@ -90,9 +90,10 @@ body {
                 }
         }
 }
-.services-section .section-title {
+.section-title {
     margin: 150px auto;
     line-height: 0.2;
+    width: fit-content;
     h1 {
         font-family: $headline-font;
         font-size: 35px;
@@ -104,17 +105,66 @@ body {
         font-size: 19px;
     }
 }
-.services-section .box .circle {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        border: 7px solid gold;
-        position: relative;
-        i {
-            font-size: 35px;
-            color: gold;
-            position: absolute;
-            top: 9px;
-            left: 9px;
+.serv {
+    display: flex;
+    justify-content: space-between;
+.box .circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 7px solid gold;
+    position: relative;
+    i {
+        font-size: 35px;
+        color: gold;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+    }
+ }  
+}
+.box {
+    h1 {
+        font-family: $headline-font;
+    }
+    p{
+        font-family: $p-font;
+    }
+}
+.portfolio-section {
+    background: #e9e4dd;
+    height: fit-content;
+    .box {
+        img{
+            width: 250px;
+            height: 250px;
         }
+        .portfolio-button {
+            width: 250px;
+            height: 70px;
+            background: white;
+                a {
+                    font-size: 20px;
+                    font-family: $first-font;
+                }
+                .p {
+                    font-family: $p-font;
+                    font-size: 15px;
+                }
+        }
+    } 
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    .social-media {
+        
+        .social-circle {
+            background: black;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+        }
+    }
 }

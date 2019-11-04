@@ -104,24 +104,34 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.services-section .section-title {
+.section-title {
   margin: 150px auto;
   line-height: 0.2;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.services-section .section-title h1 {
+.section-title h1 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 35px;
 }
 
-.services-section .section-title h2 {
+.section-title h2 {
   font-family: "Questrial", sans-serif;
   color: grey;
   font-style: italic;
   font-size: 19px;
 }
 
-.services-section .box .circle {
+.serv {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.serv .box .circle {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -129,11 +139,62 @@ body {
   position: relative;
 }
 
-.services-section .box .circle i {
+.serv .box .circle i {
   font-size: 35px;
   color: gold;
   position: absolute;
   top: 9px;
   left: 9px;
+}
+
+.box h1 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.box p {
+  font-family: "Questrial", sans-serif;
+}
+
+.portfolio-section {
+  background: #e9e4dd;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.portfolio-section .box img {
+  width: 250px;
+  height: 250px;
+}
+
+.portfolio-section .box .portfolio-button {
+  width: 250px;
+  height: 70px;
+  background: white;
+}
+
+.portfolio-section .box .portfolio-button a {
+  font-size: 20px;
+  font-family: "Parisienne", cursive;
+}
+
+.portfolio-section .box .portfolio-button .p {
+  font-family: "Questrial", sans-serif;
+  font-size: 15px;
+}
+
+.footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .social-media .social-circle {
+  background: black;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */
