@@ -16,7 +16,7 @@ body {
             height: 500px;
                 img {
                     width: 100%;
-                    height: 500px;
+                    height: auto;
                 }
             &::after {
                 content: "";
@@ -40,11 +40,11 @@ body {
                 color: gold;
                 font-size: 21px;
             }
-            #menu-list {
+            .menu-list {
                 display: flex;
                 justify-content: space-between;
                 width: fit-content;
-                ul{
+                ul {
                     list-style-type: none;
                     padding: 0;
                     li {
@@ -62,7 +62,9 @@ body {
         }
         .inner-section {
             position: absolute;
-            top: 180px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
                 h2 {
                     margin: 0 150px;
                     font-size: 25px;
@@ -86,13 +88,10 @@ body {
                 text-decoration: none;
                 color: white;
                 font-family: $headline-font;
-
                 }
         }
 }
 .section-title {
-    margin: 150px auto;
-    line-height: 0.2;
     width: fit-content;
     h1 {
         font-family: $headline-font;
@@ -108,63 +107,94 @@ body {
 .serv {
     display: flex;
     justify-content: space-between;
-.box .circle {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 7px solid gold;
-    position: relative;
-    i {
-        font-size: 35px;
-        color: gold;
-        position: absolute;
-        top: 9px;
-        left: 9px;
+    .row {
+        margin: 2px auto;
+        .box .circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 7px solid gold;
+            position: relative;
+            i {
+                font-size: 35px;
+                color: gold;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }  
     }
- }  
 }
 .box {
     h1 {
         font-family: $headline-font;
+        text-align: center;
     }
     p{
         font-family: $p-font;
+        text-align: center;
     }
 }
 .portfolio-section {
     background: #e9e4dd;
     height: fit-content;
-    .box {
-        img{
-            width: 250px;
-            height: 250px;
-        }
-        .portfolio-button {
-            width: 250px;
-            height: 70px;
-            background: white;
-                a {
-                    font-size: 20px;
-                    font-family: $first-font;
-                }
-                .p {
-                    font-family: $p-font;
-                    font-size: 15px;
-                }
+    .portfolio-boxes .row {
+        .box {
+            margin-bottom: 55px;
+            img{
+                width: 250px;
+                height: 250px;
+            }
+            .portfolio-button {
+                width: 250px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: white;
+                    a {
+                        text-decoration: none;
+                        line-height: 0.4;
+                        text-align: center;
+                        align-items: center;
+                        h1 {
+                            font-family: $headline-font;
+                            color: black;
+                        }
+                        p {
+                            font-family: $p-font;
+                            font-size: 15px;
+                            color: grey;
+                            font-style: italic;
+                        }
+                    }
+                    
+            }
         }
     } 
 }
 .footer {
     display: flex;
+    align-items: center;
+    height: 100px;
     justify-content: space-around;
-    .social-media {
-        
-        .social-circle {
+    .copyrights p {
+        font-family: $p-font;
+    }
+    .social-media .social-circle {
             background: black;
             border-radius: 50%;
             width: 35px;
             height: 35px;
             display: inline-block;
-        }
+            position: relative;
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: pink;
+            }
     }
 }

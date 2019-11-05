@@ -15,7 +15,7 @@ body {
 
 .welcome-section .img img {
   width: 100%;
-  height: 500px;
+  height: auto;
 }
 
 .welcome-section .img::after {
@@ -45,7 +45,7 @@ body {
   font-size: 21px;
 }
 
-.welcome-section #navbar #menu-list {
+.welcome-section #navbar .menu-list {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -55,17 +55,17 @@ body {
   width: fit-content;
 }
 
-.welcome-section #navbar #menu-list ul {
+.welcome-section #navbar .menu-list ul {
   list-style-type: none;
   padding: 0;
 }
 
-.welcome-section #navbar #menu-list ul li {
+.welcome-section #navbar .menu-list ul li {
   display: inline-block;
   margin: 0 15px;
 }
 
-.welcome-section #navbar #menu-list ul li a {
+.welcome-section #navbar .menu-list ul li a {
   color: white;
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
@@ -74,7 +74,9 @@ body {
 
 .welcome-section .inner-section {
   position: absolute;
-  top: 180px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .welcome-section .inner-section h2 {
@@ -105,8 +107,6 @@ body {
 }
 
 .section-title {
-  margin: 150px auto;
-  line-height: 0.2;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -131,7 +131,11 @@ body {
       justify-content: space-between;
 }
 
-.serv .box .circle {
+.serv .row {
+  margin: 2px auto;
+}
+
+.serv .row .box .circle {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -139,20 +143,23 @@ body {
   position: relative;
 }
 
-.serv .box .circle i {
+.serv .row .box .circle i {
   font-size: 35px;
   color: gold;
   position: absolute;
-  top: 9px;
-  left: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .box h1 {
   font-family: "Josefin Sans", sans-serif;
+  text-align: center;
 }
 
 .box p {
   font-family: "Questrial", sans-serif;
+  text-align: center;
 }
 
 .portfolio-section {
@@ -162,32 +169,59 @@ body {
   height: fit-content;
 }
 
-.portfolio-section .box img {
+.portfolio-section .portfolio-boxes .row .box {
+  margin-bottom: 55px;
+}
+
+.portfolio-section .portfolio-boxes .row .box img {
   width: 250px;
   height: 250px;
 }
 
-.portfolio-section .box .portfolio-button {
+.portfolio-section .portfolio-boxes .row .box .portfolio-button {
   width: 250px;
   height: 70px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   background: white;
 }
 
-.portfolio-section .box .portfolio-button a {
-  font-size: 20px;
-  font-family: "Parisienne", cursive;
+.portfolio-section .portfolio-boxes .row .box .portfolio-button a {
+  text-decoration: none;
+  line-height: 0.4;
+  text-align: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
-.portfolio-section .box .portfolio-button .p {
+.portfolio-section .portfolio-boxes .row .box .portfolio-button a h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: black;
+}
+
+.portfolio-section .portfolio-boxes .row .box .portfolio-button a p {
   font-family: "Questrial", sans-serif;
   font-size: 15px;
+  color: grey;
+  font-style: italic;
 }
 
 .footer {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.footer .copyrights p {
+  font-family: "Questrial", sans-serif;
 }
 
 .footer .social-media .social-circle {
@@ -196,5 +230,14 @@ body {
   width: 35px;
   height: 35px;
   display: inline-block;
+  position: relative;
+}
+
+.footer .social-media .social-circle i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: pink;
 }
 /*# sourceMappingURL=style.css.map */
