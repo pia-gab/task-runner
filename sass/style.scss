@@ -11,88 +11,92 @@ body {
 .welcome-section {
     width: 100%;
     position: relative;
-        .img {
+    .img {
+        width: auto;
+        height: 500px;
+        img {
+            width: 100%;
+            height: 100%;                
+        }
+        &::after {
+            content: "";
+            background-color: rgba(0,0,0,.4);
             width: 100%;
             height: 500px;
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            &::after {
-                content: "";
-                background-color: rgba(0,0,0,.4);
-                width: 100%;
-                height: 500px;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
-        #navbar {
-            width:  100%;
             position: absolute;
             top: 0;
-            background-color: transparent;
+            left: 0;
+        }
+    }
+    #navbar {
+        width:  100%;
+        position: absolute;
+        top: 0;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-around;
+        #logo h1 {
+            font-family: $first-font;
+            color: gold;
+            font-size: 21px;
+        }
+        .menu-list {
             display: flex;
-            justify-content: space-around;
-            #logo h1 {
-                font-family: $first-font;
-                color: gold;
-                font-size: 21px;
-            }
-            .menu-list {
-                display: flex;
-                justify-content: space-between;
-                width: fit-content;
-                ul {
-                    list-style-type: none;
-                    padding: 0;
-                    li {
-                        display: inline-block;
-                        margin: 0 15px;
-                        a {
-                            color: white;
-                            text-decoration: none;
-                            font-family: $headline-font;
-                            font-size: 17px;
-                        }
+            justify-content: space-between;
+            width: fit-content;
+            ul {
+                list-style-type: none;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    margin: 0 15px;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-family: $headline-font;
+                        font-size: 17px;
                     }
                 }
             }
         }
-        .inner-section {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-                h2 {
-                    margin: 0 150px;
-                    font-size: 25px;
-                    line-height: 0.8;
-                    font-family: $first-font;
-                    color: white;
-                }
-                h1 {
-                    margin: 24px 0;
-                    font-size: 72px;
-                    font-family: $headline-font;
-                }
-                .btn {
-                display: inline-block;
-                background: gold;
-                min-width: 160px;
-                margin: 0 120px;
-                padding: 16px;
-                font-size: 20px;
-                text-align: center;
-                text-decoration: none;
-                color: white;
-                font-family: $headline-font;
-                }
+    }
+    .inner-section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h2 {
+         margin: 0 150px;
+            font-size: 25px;
+            line-height: 0.8;
+            font-family: $first-font;
+            color: white;
         }
+        h1 {
+            margin: 24px 0;
+            font-size: 72px;
+            font-family: $headline-font;
+        }
+        .btn {
+            display: inline-block;
+            background: gold;
+            min-width: 160px;
+            margin: 0 120px;
+            padding: 16px;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-family: $headline-font;
+            }
+    }
+}
+.services-section {
+    margin: 130px 0;
 }
 .section-title {
     width: fit-content;
+    margin: 25px auto;
     h1 {
         font-family: $headline-font;
         font-size: 35px;
@@ -115,6 +119,7 @@ body {
             border-radius: 50%;
             border: 7px solid gold;
             position: relative;
+            margin: auto;
             i {
                 font-size: 35px;
                 color: gold;
@@ -153,23 +158,22 @@ body {
                 align-items: center;
                 justify-content: center;
                 background: white;
-                    a {
-                        text-decoration: none;
-                        line-height: 0.4;
-                        text-align: center;
-                        align-items: center;
-                        h1 {
-                            font-family: $headline-font;
-                            color: black;
-                        }
-                        p {
-                            font-family: $p-font;
-                            font-size: 15px;
-                            color: grey;
-                            font-style: italic;
-                        }
+                a {
+                    text-decoration: none;
+                    line-height: 0.4;
+                    text-align: center;
+                    align-items: center;
+                    h1 {
+                        font-family: $headline-font;
+                        color: black;
                     }
-                    
+                    p {
+                        font-family: $p-font;
+                        font-size: 15px;
+                        color: grey;
+                        font-style: italic;
+                    }
+                }            
             }
         }
     } 
@@ -183,18 +187,18 @@ body {
         font-family: $p-font;
     }
     .social-media .social-circle {
-            background: black;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            display: inline-block;
-            position: relative;
-            i {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: pink;
-            }
+        background: black;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        position: relative;
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: pink;
+        }
     }
 }

@@ -9,13 +9,13 @@ body {
 }
 
 .welcome-section .img {
-  width: 100%;
+  width: auto;
   height: 500px;
 }
 
 .welcome-section .img img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .welcome-section .img::after {
@@ -106,10 +106,15 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+.services-section {
+  margin: 130px 0;
+}
+
 .section-title {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin: 25px auto;
 }
 
 .section-title h1 {
@@ -141,6 +146,7 @@ body {
   border-radius: 50%;
   border: 7px solid gold;
   position: relative;
+  margin: auto;
 }
 
 .serv .row .box .circle i {
